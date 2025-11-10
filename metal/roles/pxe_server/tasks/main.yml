@@ -10,8 +10,8 @@
 
 - name: Download boot image
   ansible.builtin.get_url:
-    url: "{{ iso_url }}"
-    dest: "{{ role_path }}/files/data/iso/{{ iso_url | basename }}"
+    url: "{{ iso_url_local }}"
+    dest: "{{ role_path }}/files/data/iso/{{ iso_url_local | basename }}"
     checksum: "{{ iso_checksum }}"
     mode: 0644
   register: iso
